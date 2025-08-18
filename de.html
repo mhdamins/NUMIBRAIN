@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NumiBrain Academy</title>
+  <style>
+    body {
+      background-color: #ad3d9e;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: white;
+      text-align: center;
+      transition: background-color 0.5s ease;
+    }
+    header {
+      padding: 20px;
+      animation: fadeIn 1s ease-in;
+    }
+    img.logo {
+      width: 180px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .section {
+      margin: 40px auto;
+      padding: 20px;
+      max-width: 800px;
+      background-color: #ffffff22;
+      border-radius: 10px;
+      animation: fadeInUp 1s ease-in;
+    }
+    .section img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    input, select, button {
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #ffa500;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #ff8800;
+    }
+    .lang-switch {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+    }
+    .lang-switch a {
+      background: #fff;
+      color: #ad3d9e;
+      padding: 8px 12px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="lang-switch">
+  <a href="index.html">العربية</a>
+</div>
+
+<header>
+  <img src="logo.png" alt="NumiBrain Logo" class="logo"/>
+  <h1>NumiBrain Academy</h1>
+  <p>Entwickle die Fähigkeiten deines Kindes mit Spaß und Intelligenz!</p>
+</header>
+
+<div class="section">
+  <h2>🧠 Mentalrechenkurs</h2>
+  <img src="mental.png" alt="Mental Math">
+  <p>Fördert Konzentration und schnelle Auffassungsgabe. Trainiert Kinder, Aufgaben ohne Taschenrechner zu lösen. Für Kinder von 5 bis 10 Jahren geeignet.</p>
+</div>
+
+<div class="section">
+  <h2>📣 Arabischkurs</h2>
+  <img src="arabic.png" alt="Arabic Course">
+  <p>Verbessert die Aussprache, stärkt das Leseverständnis und vermittelt Inhalte auf interaktive Weise.</p>
+</div>
+
+<div class="section">
+  <h2>🎲 Rubik’s Cube Kurs</h2>
+  <img src="rubik.png" alt="Rubik Cube Course">
+  <p>Entwickelt Denkfähigkeiten, Analysevermögen sowie Geduld und Disziplin durch spannende Herausforderungen.</p>
+</div>
+
+<div class="section">
+  <h2>📞 Kostenloses Bewertungsgespräch</h2>
+  <img src="freecall.png" alt="Evaluation Call">
+  <p>Buche ein kostenloses 30-minütiges Gespräch mit der Trainerin Nour Saleha, um den passenden Kurs für dein Kind zu finden.</p>
+</div>
+
+<div class="section">
+  <h2>👩‍🏫 Über die Trainerin</h2>
+  <img src="trainer.png" alt="Trainer">
+  <p>Nour Saleha – International zertifizierte Trainerin mit Erfahrung in der Entwicklung der geistigen Fähigkeiten von Kindern auf interaktive Weise.</p>
+</div>
+
+<div class="section">
+<h2>📋 Jetzt anmelden</h2>
+<form action="https://formspree.io/f/mpwleeol" method="POST">
+  <input type="text" name="name" placeholder="Name des Elternteils" required />
+  <input type="text" name="child_age" placeholder="Alter des Kindes" required />
+  <input type="tel" name="phone" placeholder="Telefonnummer" required />
+  <input type="email" name="email" placeholder="E-Mail-Adresse (optional)" />
+  <select name="course" required>
+    <option value="">Kurs auswählen</option>
+    <option value="mental_math">Mentalrechnen</option>
+    <option value="arabic">Arabisch</option>
+    <option value="rubik">Rubik’s Cube</option>
+  </select>
+  <button type="submit">Anfrage senden</button>
+</form>
+</div>
+
+</body>
+</html>
