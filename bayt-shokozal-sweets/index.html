@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بيت شوكوزال للحلويات | بيت الحلويات الرائع</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container site-header">
+    <p class="badge">مشروع مستقل</p>
+    <h1>بيت شوكوزال للحلويات</h1>
+    <p class="subtitle">بيت الحلويات الرائع — حلويات بطعم أصيل وجودة عالية</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>الأصناف المتوفرة</h2>
+      <div class="grid">
+        <article>
+          <h3>شعبيات جوز</h3>
+          <p>رقائق هشة محشوة بالجوز المحمص بنكهة شرقية مميزة.</p>
+        </article>
+
+        <article>
+          <h3>شعبيات قشطة بحليب الغنم</h3>
+          <p>قشطة غنية من حليب الغنم داخل طبقات ذهبية مقرمشة.</p>
+        </article>
+
+        <article>
+          <h3>عش البلبل بلحم الغنم الدوني</h3>
+          <p>وصفة فاخرة بطابع خاص لعش البلبل لعشاق النكهات القوية.</p>
+        </article>
+
+        <article>
+          <h3>فطائر الجبن برقائق هشة ومقرمشة</h3>
+          <p>فطائر محشوة بجبن الغنم بقوام خفيف ومذاق شهي.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>مواعيد الطلب والتسليم</h2>
+      <div class="columns">
+        <article>
+          <h3>الطلب الأول</h3>
+          <ul>
+            <li>أيام الطلب: الخميس، الجمعة، السبت.</li>
+            <li>إغلاق الطلبات: الساعة 4:00 عصراً.</li>
+            <li>أيام التسليم: الاثنين والثلاثاء.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>الطلب الثاني</h3>
+          <ul>
+            <li>أيام الطلب: الاثنين والثلاثاء (للعصر).</li>
+            <li>أيام التسليم: الخميس، الجمعة، السبت.</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="notice"><strong>تنبيه:</strong> لا يوجد استقبال طلبات يومي الأحد والأربعاء.</p>
+      <p class="notice"><strong>التسليم:</strong> متوفر في أماكن محددة، كما يتوفر التوصيل إلى البيت عند الطلب.</p>
+    </section>
+
+    <section class="card">
+      <h2>نموذج الطلب</h2>
+      <form action="#" method="post">
+        <label for="name">الاسم الكامل</label>
+        <input id="name" name="name" type="text" placeholder="اكتب اسمك" required />
+
+        <label for="phone">رقم الهاتف</label>
+        <input id="phone" name="phone" type="tel" placeholder="05XXXXXXXX" required />
+
+        <label for="product">الصنف</label>
+        <select id="product" name="product" required>
+          <option value="">اختر الصنف</option>
+          <option>شعبيات جوز</option>
+          <option>شعبيات قشطة بحليب الغنم</option>
+          <option>عش البلبل بلحم الغنم الدوني</option>
+          <option>فطائر الجبن بجبن الغنم</option>
+        </select>
+
+        <label for="delivery">طريقة الاستلام</label>
+        <select id="delivery" name="delivery" required>
+          <option value="">اختر طريقة الاستلام</option>
+          <option>استلام من نقاط التسليم</option>
+          <option>توصيل للبيت</option>
+        </select>
+
+        <label for="notes">ملاحظات</label>
+        <textarea id="notes" name="notes" placeholder="الموقع، الكمية، أو أي تفاصيل إضافية"></textarea>
+
+        <button type="submit">إرسال الطلب</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>© بيت شوكوزال للحلويات — مشروع GitHub مستقل جاهز للنشر.</p>
+  </footer>
+</body>
+</html>

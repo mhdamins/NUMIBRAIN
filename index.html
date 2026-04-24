@@ -1,149 +1,278 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NumiBrain Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بيت شوكوزال للحلويات | بيت الحلويات الرائع</title>
   <style>
-    body {
-      background-color: #ad3d9e;
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      color: white;
-      text-align: center;
-      transition: background-color 0.5s ease;
-    }
-    header {
-      padding: 20px;
-      animation: fadeIn 1s ease-in;
-    }
-    img.logo {
-      width: 180px;
-      margin-bottom: 10px;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-    .section {
-      margin: 40px auto;
-      padding: 20px;
-      max-width: 800px;
-      background-color: #ffffff22;
-      border-radius: 10px;
-      animation: fadeInUp 1s ease-in;
-    }
-    .section img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 20px;
-    }
-    input, select, button {
-      padding: 10px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-    }
-    button {
-      background-color: #ffa500;
-      color: white;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    button:hover {
-      background-color: #ff8800;
-    }
-    .lang-switch {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-    }
-    .lang-switch a {
-      background: #fff;
-      color: #ad3d9e;
-      padding: 8px 12px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
+    :root {
+      --bg: #fff8f1;
+      --card: #ffffff;
+      --accent: #7a2e1f;
+      --accent-soft: #b8573f;
+      --text: #2e1d16;
+      --muted: #6e5a52;
+      --border: #f0ddd2;
     }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    * {
+      box-sizing: border-box;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+
+    body {
+      margin: 0;
+      font-family: "Tahoma", "Arial", sans-serif;
+      background: linear-gradient(135deg, #fff8f1 0%, #fde9df 100%);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 56px 0 28px;
+      text-align: center;
+    }
+
+    .brand {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      margin: 0;
+      color: var(--accent);
+    }
+
+    .subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 15px 35px rgba(122, 46, 31, 0.08);
+      margin-bottom: 26px;
+    }
+
+    .hero h2 {
+      margin-top: 0;
+      color: var(--accent);
+      font-size: clamp(1.3rem, 3.2vw, 1.8rem);
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .product {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fffdfb;
+      padding: 14px;
+    }
+
+    .product h3 {
+      margin: 0 0 8px;
+      color: #8a3a29;
+      font-size: 1.05rem;
+    }
+
+    .schedule {
+      margin: 26px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .schedule-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .schedule-card h3 {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 1.1rem;
+    }
+
+    .notice {
+      background: #fff2ea;
+      border-right: 4px solid var(--accent-soft);
+      padding: 12px 14px;
+      border-radius: 8px;
+      color: #5b3d33;
+      margin-top: 12px;
+    }
+
+    form {
+      margin: 30px 0 42px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      display: grid;
+      gap: 12px;
+    }
+
+    label {
+      font-weight: 700;
+      color: #5f3125;
+      margin-bottom: 4px;
+      display: inline-block;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+      width: 100%;
+      border: 1px solid #e9d6cc;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 1rem;
+      font-family: inherit;
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    button {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-soft) 100%);
+      color: #fff;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.18s ease, opacity 0.2s ease;
+    }
+
+    button:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 0 0 30px;
+      font-size: 0.95rem;
     }
   </style>
 </head>
 <body>
+  <header class="container">
+    <h1 class="brand">بيت شوكوزال للحلويات</h1>
+    <p class="subtitle">(شوكوزال للحلويات) — بيت الحلويات الرائع</p>
+  </header>
 
-<div class="lang-switch">
-  <a href="de.html">Deutsch</a>
-</div>
+  <main class="container">
+    <section class="hero">
+      <h2>أصنافنا المميزة</h2>
+      <p>نقدّم لكم حلويات عربية فاخرة محضّرة بعناية وبمكوّنات غنم بلدية عالية الجودة:</p>
 
-<header>
-  <img src="logo.png" alt="NumiBrain Logo" class="logo"/>
-  <h1>NumiBrain Academy</h1>
-  <p>طور مهارات طفلك بذكاء ومتعة!</p>
-</header>
+      <div class="products">
+        <article class="product">
+          <h3>شعبيات جوز</h3>
+          <p>رقائق ذهبية محشية بالجوز المحمّص ونكهة شرقية متوازنة.</p>
+        </article>
 
-<div class="section">
-  <h2>🧠 دورة الحساب الذهني</h2>
-  <img src="mental.png" alt="Mental Math">
-  <p>يعزز التركيز وسرعة البديهة، ويدرّب الطفل على حل المسائل الذهنية بدون آلة حاسبة. مناسبة للأعمار من 5 إلى 10 سنوات.</p>
-</div>
+        <article class="product">
+          <h3>شعبيات قشطة بحليب الغنم</h3>
+          <p>قشطة ناعمة بطعم غني من حليب الغنم داخل عجينة خفيفة ومقرمشة.</p>
+        </article>
 
-<div class="section">
-  <h2>📣 دورة اللغة العربية</h2>
-  <img src="arabic.png" alt="Arabic Course">
-  <p>تحسين النطق، تنمية مهارات القراءة، وتعزيز الفهم والاستيعاب بأساليب ممتعة وتفاعلية.</p>
-</div>
+        <article class="product">
+          <h3>عش البلبل بلحم الغنم الدوني</h3>
+          <p>تركيبة خاصة وفريدة لعش البلبل بنكهات مميزة تناسب الذوّاقة.</p>
+        </article>
 
-<div class="section">
-  <h2>🎲 دورة مكعبات الروبك</h2>
-  <img src="rubik.png" alt="Rubik Cube Course">
-  <p>تنمية مهارات التفكير والتحليل وتعزيز الصبر والانضباط من خلال تحديات ذهنية شيقة.</p>
-</div>
+        <article class="product">
+          <h3>فطائر الجبن برقائق هشة ومقرمشة</h3>
+          <p>محشوة بجبن الغنم وبقوام يجمع بين الهشاشة والطراوة.</p>
+        </article>
+      </div>
+    </section>
 
-<div class="section">
-  <h2>📞 مكالمة تقييم مجانية</h2>
-  <img src="freecall.png" alt="Evaluation Call">
-  <p>احجز مكالمة مجانية مع المدربة نور صالحة لمدة 30 دقيقة لتحديد المستوى واختيار الدورة المناسبة للطفل.</p>
-</div>
+    <section class="schedule">
+      <article class="schedule-card">
+        <h3>الدفعة الأولى من الطلبات</h3>
+        <ul>
+          <li>استقبال الطلبات: <strong>الخميس، الجمعة، السبت</strong>.</li>
+          <li>آخر وقت للطلب: <strong>الساعة 4:00 عصراً</strong>.</li>
+          <li>التسليم: <strong>الاثنين والثلاثاء</strong>.</li>
+        </ul>
+      </article>
 
-<div class="section">
-  <h2>👩‍🏫 عن المدربة</h2>
-  <img src="trainer.png" alt="Trainer">
-  <p>نور صالحة - مدربة معتمدة دولياً بخبرة في تطوير مهارات الأطفال الذهنية بطريقة تفاعلية ومبتكرة.</p>
-</div>
+      <article class="schedule-card">
+        <h3>الدفعة الثانية من الطلبات</h3>
+        <ul>
+          <li>استقبال الطلبات: <strong>الاثنين والثلاثاء (للعصر)</strong>.</li>
+          <li>التسليم: <strong>الخميس، الجمعة، السبت</strong>.</li>
+          <li>لا يوجد استقبال طلبات يومي <strong>الأحد والأربعاء</strong>.</li>
+        </ul>
+      </article>
+    </section>
 
-<div class="section">
-<h2>📋 احجز الآن</h2>
-<form action="https://formspree.io/f/mpwleeol" method="POST">
-  <input type="text" name="name" placeholder="اسم ولي الأمر" required />
-  <input type="text" name="child_age" placeholder="عمر الطفل" required />
-  <input type="tel" name="phone" placeholder="رقم الهاتف" required />
-  <input type="email" name="email" placeholder="البريد الإلكتروني (اختياري)" />
-  <select name="course" required>
-    <option value="">اختر نوع الدورة</option>
-    <option value="mental_math">الحساب الذهني</option>
-    <option value="arabic">اللغة العربية</option>
-    <option value="rubik">مكعبات الروبك</option>
-  </select>
-  <button type="submit">إرسال الطلب</button>
-</form>
-</div>
+    <div class="notice">
+      <strong>ملاحظة التسليم:</strong>
+      التسليم متوفر في أماكن محددة، كما يتوفر خيار <strong>التوصيل إلى البيت</strong> عند الطلب.
+    </div>
 
+    <form action="#" method="post">
+      <h2 style="margin: 0 0 8px; color: var(--accent);">نموذج طلب سريع</h2>
+
+      <div>
+        <label for="name">الاسم الكامل</label>
+        <input id="name" name="name" type="text" placeholder="اكتب اسمك" required />
+      </div>
+
+      <div>
+        <label for="phone">رقم الهاتف</label>
+        <input id="phone" name="phone" type="tel" placeholder="مثال: 05XXXXXXXX" required />
+      </div>
+
+      <div>
+        <label for="product">الصنف المطلوب</label>
+        <select id="product" name="product" required>
+          <option value="">اختر الصنف</option>
+          <option>شعبيات جوز</option>
+          <option>شعبيات قشطة بحليب الغنم</option>
+          <option>عش البلبل بلحم الغنم الدوني</option>
+          <option>فطائر الجبن بجبن الغنم</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="delivery">طريقة الاستلام</label>
+        <select id="delivery" name="delivery" required>
+          <option value="">اختر طريقة الاستلام</option>
+          <option>استلام من نقطة التسليم</option>
+          <option>توصيل للبيت</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="notes">ملاحظات إضافية</label>
+        <textarea id="notes" name="notes" placeholder="اكتب ملاحظاتك مثل الموقع أو الكمية المطلوبة"></textarea>
+      </div>
+
+      <button type="submit">إرسال الطلب</button>
+    </form>
+  </main>
+
+  <footer class="container">
+    جميع الحقوق محفوظة © بيت شوكوزال للحلويات
+  </footer>
 </body>
 </html>
